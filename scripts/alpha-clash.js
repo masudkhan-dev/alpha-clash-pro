@@ -20,7 +20,15 @@ function play() {
 
 // wanna use more advanced js
 
+function continueGame() {
+  // display randomly genarate alphabet
+  const live = document.getElementById("live-alphabet");
+  const liveBg = live.innerText =  randomAlphabet();
+  setBg(liveBg);
+}
+
 function play() {
-  addHidden("home");
+  addHideen("home");
   removeHidden("playground");
+  continueGame();
 }
