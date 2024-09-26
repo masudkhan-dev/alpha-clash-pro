@@ -21,7 +21,7 @@
       class="bg-[#010313] min-h-screen flex flex-col justify-center items-center"
     >
       <div
-        class="bg-gradient-to-b from-[#c340e0] via-[#8b2fbd] via-[#561e98] via-[#39167b] to-[#180b3a]    w-[50%] bg-center min-h-screen relative"
+        class="bg-gradient-to-b from-[#c340e0] via-[#8b2fbd] via-[#561e98] via-[#39167b] to-[#180b3a] w-[50%] bg-center min-h-screen relative"
       ></div>
 
       <div class="absolute">
@@ -31,7 +31,9 @@
             <h1 class="text-8xl tracking-widest uppercase anton-regular">
               Alpha Clash Pro
             </h1>
-            <p class="text-base poppins-medium">Unless your keyboard Kun g Fu: Press "Enter" to Play</p>
+            <p class="text-base poppins-medium">
+              Unless your keyboard Kun g Fu: Press "Enter" to Play
+            </p>
             <button onclick="play()" class="btn px-10">Play Now</button>
           </div>
         </section>
@@ -51,7 +53,12 @@
                 </p>
               </div>
               <div class="flex flex-col justify-center items-center h-full">
-                <h2 id="live-alphabet" class="text-8xl poppins-extrabold uppercase">Y</h2>
+                <h2
+                  id="live-alphabet"
+                  class="text-8xl poppins-extrabold uppercase"
+                >
+                  Y
+                </h2>
               </div>
             </div>
 
@@ -96,36 +103,40 @@
             <!-- live life score -->
             <div class="score flex justify-between items-center w-1/3">
               <button
-                class="btn bg-purple-400 rounded-full text-white hover:text-black px-8"
+                class="btn bg-purple-500 rounded-full text-white hover:text-black px-8"
               >
                 Life
                 <i class="fa-solid fa-heart-circle-bolt"></i>
-                <span>1</span>
+                <span id="live-life">5</span>
               </button>
               <button
-                class="btn bg-purple-800 rounded-full text-white hover:text-black px-8"
+                class="btn bg-purple-900 rounded-full text-white hover:text-black px-8"
               >
                 Score
                 <i
                   class="fa-solid fa-dollar-sign bg-[#fff] text-black px-2 py-1 rounded-full"
                 ></i>
-                <span>1</span>
+                <span id="live-score">0</span>
               </button>
+
             </div>
+            <p class="text-2xl text-white">Press ESC to stop the game</p>
           </div>
         </section>
 
         <!-- score -->
-        <section class="hidden">
+        <section id="score" class="hidden">
           <div
             class="bg-gradient-to-r from-[#9675cf] via-[#734ab8] to-[#4d1aa1] p-8 rounded-xl text-center space-y-6"
           >
+            <h2 class="text-4xl text-white">Game Over</h2>
             <h1 class="text-8xl text-white">
               <span class="poppins-extrabold">Score:</span>
-              <span class="poppins-regular">14</span>
+              <span id="final-score" class="poppins-regular">14</span>
             </h1>
-            <button class="btn">Play Again</button>
+            <button onclick="play()" class="btn">Play Again</button>
             <p class="text-white poppins-medium">Practice will make you pro</p>
+           
           </div>
         </section>
       </div>
